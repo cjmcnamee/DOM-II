@@ -8,6 +8,14 @@ beep.addEventListener('click', (event) => {
   alert('Beep beep!');
 });
 
+// Makes boat image say "boat boat!" when you double click it
+
+const boat = document.querySelector('.content-destination img')
+
+boat.addEventListener('dblclick', (event) => {
+  alert('boat boat!');
+})
+
 // Makes "Fun Bus" text yellow when you hover over it, and back to normal when you hover off of it
 
 const funBus = document.querySelector('.logo-heading');
@@ -26,11 +34,12 @@ funBus.addEventListener('mouseout', (event) => {
 const seizure = document.querySelector('body');
 
 seizure.addEventListener('keydown', (event) => {
-    event.target.style.backgroundColor = 'slategrey';
+    event.target.style.backgroundColor = 'pink';
 })
 seizure.addEventListener('keyup', (event) => {
     event.target.style.backgroundColor = 'white';
 })
+
 
 // Makes it so you can zoom the bus image in and out after clicking on it
 
@@ -48,4 +57,4 @@ function zoom(event) {
 
 window.addEventListener('load', (event) => {
     alert('page is fully loaded');
-});
+})
