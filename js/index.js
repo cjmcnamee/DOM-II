@@ -32,4 +32,14 @@ seizure.addEventListener('keyup', (event) => {
     event.target.style.backgroundColor = 'white';
 })
 
-// 
+// Makes it so you can zoom the bus image in and out after clicking on it 
+
+let scale = 1;
+beep.onwheel = zoom;
+
+function zoom(event) {
+  event.preventDefault();
+  scale += event.deltaY *-0.01
+  scale = Math.min(Math.max(.125, scale), 4);
+  beep.style.transform = `scale(${scale})`;
+}
