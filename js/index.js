@@ -58,3 +58,17 @@ function zoom(event) {
 window.addEventListener('load', (event) => {
     alert('page is fully loaded');
 })
+
+// Makes all images in the document dragable
+
+var dragged;
+
+document.addEventListener("drag", function(event) {
+}, false);
+document.addEventListener("dragstart", function(event) {
+  dragged = event.target;
+  event.target.style.opacity = .5;
+}, false);
+document.addEventListener("dragend", function(event) {
+  event.target.style.opacity = "";
+}, false);
